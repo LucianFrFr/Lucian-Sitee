@@ -1,0 +1,35 @@
+
+body {
+  background-color: black;
+  color: black;
+  font-family: Verdana;
+}
+
+a:link {
+  color: orangered;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: slateblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h1 {
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
