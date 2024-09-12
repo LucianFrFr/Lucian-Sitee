@@ -1,47 +1,192 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucian.Top</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="Lucian.Top" property="og:title" />
+    <meta content="Hi :)" property="og:description" />
+    <link href="About Me Site/assets/css/anim.css" rel="stylesheet">
+    <link rel="stylesheet" href="About Me Site/assets/css/style.css" />
+    <link rel="stylesheet" href="About Me Site/assets/css/vile.css" />
+    <style>
+       #snowfall-container {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       pointer-events: none;
+       z-index: 9999;
+       }
+       .snowflake {
+       position: absolute;
+       width: 5px;
+       height: 5px;
+       background-color: #ffffff;
+       border-radius: 50%;
+       pointer-events: none;
+       opacity: 0.4;
+       }
+       @keyframes fall {
+       to {
+       transform: translateY(100vh);
+       }
+       }
+       #blur-box {
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       padding: 31px; 
+       width: 35%; 
+       background-color: rgba(0, 0, 0, 0.397);
+       backdrop-filter: blur(15px);
+       border-radius: 10px;
+       color: rgba(255, 255, 255, 0.774);
+       text-align: center;
+       }
+       #profile-picture {
+       width: 100px; 
+       height: 100px;
+       background-color: #ffffff00; 
+       border-radius: 50%;
+       position: absolute;
+       top:  30%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       overflow: hidden;
+       }
+       #profile-picture img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       }
+       #username {
+       font-size: 35px;
+       margin-top: 130px;
+       text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+       }
+       #bio {
+       font-size: 18px; 
+       margin-top: 15px;
+       text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+       }
+       #video-background {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       z-index: -1; 
+       }
+       .social-icon {
+       display: inline-block;
+       width: 32px;
+       height: 32px;
+       margin: 10px;
+       font-size: 34px;
+       text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+       transition: transform 0.3s ease-in-out; 
+       }
+       .social-icon:hover {
+       color: #ffffff;
+       transform: scale(1.2);
+       }
+    </style>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const numSnowflakes = 20;
+           const container = document.getElementById("snowfall-container");
+       
+           for (let i = 0; i < numSnowflakes; i++) {
+               const snowflake = document.createElement("div");
+               snowflake.className = "snowflake";
+               container.appendChild(snowflake);
+       
+               animateSnowflake(snowflake);
+           }
+       
+           function animateSnowflake(snowflake) {
+               const speed = Math.random() * 2 + 0.5;
+               const initialPosition = Math.random() * 100;
+               const rotation = Math.random() * 360;
+       
+               snowflake.style.left = initialPosition + "vw";
+               snowflake.style.animation = `fall ${speed}s linear infinite`;
+               snowflake.style.transform = `rotate(${rotation}deg)`;
+           }
+       });
+    </script>
+    <script>
+       window.RufflePlayer = window.RufflePlayer || {};
+       window.RufflePlayer.config = { "autoplay": "on", "unmuteOverlay": "hidden" };
+    </script>
+    <script type="text/javascript" src="About Me Site/assets/js/ruffle.js" defer="true"></script>
+    <link href="About Me Site/assets/css/cosmo.css" rel="stylesheet">
+ </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <html><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roblox Revival Archives </title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body style="background-color:black;">
-<center>
-
-
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-
-
-<h1 style="background-color:slategray;">Lucian.Top</h1>
-<p style="background-color:skyblue;">THIS SERVICE ISNT TO HELP SKIDDERS SKID, ONLY ARCHIVE.</p>
-
-<font color="white">
-<br>
-<br>
-
-<font color="white"><font size="+3">Working roblox revival source codes</font></font>
-<br>
-
-<br>
-<a href="https://github.com/SrCookie450/economy-simulator-fixed">Economy-Simulator-Fixed (SrCookie450)</a>
-<br><br>
-
-<script type="text/javascript" src="//counter.websiteout.com/js/2/6/3/1"></script>
-
-<br><br>
-
-<nav>
-<a href="contact.html">Contact</a> | 
-<a href="Q&A.html">FAQ</a> | 
-<a href="Info.html">About</a> | 
-
-</nav>
-
-<br>
-<img src="images/discord-no-way-2.gif" title="I may or may not respond to you anything about this project via Discord or any other platform, only E-mail.">
-<img src="images/anybrowser3.gif">
-<img src="images/he-him.gif" title="The creator of this service identifies as a male.">
-<a href="https://www.7-zip.org/download.html"><img src="images/7zip.gif" title="Download 7-Zip!"></a>
-<img src="images/wii.gif">
-<img src="images/can.gif">
-
-
-</font></center></body></html>
+    <div id="snowfall-container"></div>
+    <script src="About Me Site/assets/js/disable_inspect.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Revival Archives </title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body style="background-color:black;">
+    <center>
+    
+    
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    
+    <h1 style="background-color:slategray;">Lucian.Top</h1>
+    <p style="background-color:skyblue;">THIS SERVICE ISNT TO HELP SKIDDERS SKID, ONLY ARCHIVE.</p>
+    
+    <font color="white">
+    <br>
+    <br>
+    
+    <font color="white"><font size="+3">Working roblox revival source codes</font></font>
+    <br>
+    
+    <br>
+    <a href="https://github.com/SrCookie450/economy-simulator-fixed">Economy-Simulator-Fixed (SrCookie450)</a>
+    <br><br>
+    
+    <script type="text/javascript" src="//counter.websiteout.com/js/2/6/3/1"></script>
+    
+    <br><br>
+    
+    <nav>
+    <a href="contact.html">Contact</a> | 
+    <a href="Q&A.html">FAQ</a> | 
+    <a href="Info.html">About</a> | 
+    
+    </nav>
+    
+    <br>
+    <img src="images/discord-no-way-2.gif" title="I may or may not respond to you anything about this project via Discord or any other platform, only E-mail.">
+    <img src="images/anybrowser3.gif">
+    <img src="images/he-him.gif" title="The creator of this service identifies as a male.">
+    <a href="https://www.7-zip.org/download.html"><img src="images/7zip.gif" title="Download 7-Zip!"></a>
+    <img src="images/wii.gif">
+    <img src="images/can.gif">
+    
+    
+    </font></center></body></html>
