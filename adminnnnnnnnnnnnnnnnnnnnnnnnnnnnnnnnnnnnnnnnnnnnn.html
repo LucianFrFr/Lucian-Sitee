@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 50%; margin: auto; padding: 20px; }
+        textarea { width: 100%; height: 100px; }
+        .button { padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <form action="update.php" method="post">
+            <label for="content">Edit the text:</label>
+            <textarea id="content" name="content"><?php
+                // PHP script to read the current content from the file
+                $file = 'content.txt';
+                if (file_exists($file)) {
+                    echo htmlspecialchars(file_get_contents($file));
+                }
+            ?></textarea>
+            <button type="submit" class="button">Update</button>
+        </form>
+    </div>
+</body>
+</html>

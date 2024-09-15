@@ -2,6 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background-color: black; color: white; }
+        h1 { background-color: slategray; }
+        p { background-color: skyblue; }
+        a { color: white; text-decoration: none; }
+        nav { margin-top: 20px; }
+    </style>
     <title>Lucian.Top</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="Lucian.Top" property="og:title" />
@@ -156,8 +163,16 @@
     
     
     <h1 style="background-color:slategray;">Lucian.Top</h1>
-    <p style="background-color:skyblue;">THIS SERVICE ISNT TO HELP SKIDDERS SKID, ONLY ARCHIVE.</p>
     
+    <?php
+    $file = 'content.txt';
+    if (file_exists($file)) {
+        $content = htmlspecialchars(file_get_contents($file));
+        echo "<p>$content</p>";
+    } else {
+        echo "<p>Content not found</p>";
+    }
+    ?>    
     <font color="white">
     <br>
     <br>
